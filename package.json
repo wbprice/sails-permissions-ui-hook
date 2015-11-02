@@ -1,15 +1,22 @@
 {
   "name": "sails-permissions-ui",
-  "version": "0.0.1",
+  "version": "0.0.0",
+<<<<<<< HEAD
   "description": "A graphical tool for managing permissions in SailsJS.",
-  "main": "index.js",
-  "dependencies": {},
+  "main": "dist/api/hooks/permissionsui/index.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "marlinspike": "^0.12.14",
+    "babel": "^5.8.21",
+    "gulp-babel": "^5.2.1",
+  },
   "devDependencies": {
-    "gulp-babel": "^6.0.0",
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "sails": "~0.11.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "gulp && mocha --reporter spec --compilers js:babel/register",
+    "prepublish": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,5 +32,28 @@
   "bugs": {
     "url": "https://github.com/wbprice/sails-permissions-ui/issues"
   },
-  "homepage": "https://github.com/wbprice/sails-permissions-ui#readme"
+  "homepage": "https://github.com/wbprice/sails-permissions-ui#readme",
+  "sails": {
+    "isHook": true
+=======
+  "description": "A sample marlinspike",
+  "main": "dist/api/hooks/permissions-ui/index.js",
+  "scripts": {
+    "test": "gulp && mocha --reporter spec --compilers js:babel/register",
+    "install": "gulp"
+  },
+  "dependencies": {
+    "babel": "^5.8.21",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "marlinspike": "^0.12"
+  },
+  "devDependencies": {
+    "sails": "balderdashy/sails"
+  },
+  "sails": {
+    "isHook": true,
+    "hookName": "permissions-ui"
+>>>>>>> 870b97d... setup.
+  }
 }
