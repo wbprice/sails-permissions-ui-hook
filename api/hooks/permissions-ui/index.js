@@ -5,6 +5,13 @@ class PermissionsUI extends Marlinspike {
     super(sails, module)
   }
 
+  routes () {
+    return {
+      'GET /permissions/edit': 'PermissionsUIController.foo'
+
+    }
+  }
+
 }
 
 export default Marlinspike.createSailsHook(PermissionsUI);
