@@ -7,7 +7,11 @@ class PermissionsUI extends Marlinspike {
 
   routes () {
     return {
-      'GET /permissions/edit': 'PermissionsUIController.foo'
+      after: {
+        'GET /permission/edit': function(req, res, next) {
+          res.ok('hit a route');
+        }
+      }
     }
   }
 

@@ -8,7 +8,7 @@
 module.exports = {
 
   foo: function(req, res, next) {
-    sails.log.info('hit a route');
+    res.ok('hit a route');
   }
 
 };
