@@ -6,7 +6,8 @@ module.exports['permissions-ui'] = {
     controllers: true,
     models: false,
     services: false,
-    config: true
+    config: true,
+    policies: false
   }
 
 }
